@@ -1,0 +1,48 @@
+START
+	get width from user
+	get type of number system from user
+	
+	switch (type of number system)
+		case d: call dec2b function
+		case o: call oct2b function
+		case x: call for hex2b function
+		default: print error message
+	
+	dec2b {
+	get decimal number from user
+	turn decimal to binary
+	check if the binary width equal to user defined width
+		PRINT binary
+	} 
+
+	oct2b {
+	get octal number from user
+	if user defined width equals octal width * 3
+		reverse octal
+		convert octal to decimal
+		convert decimal to binary 
+		reverse binary 
+		PRINTF binary
+	}
+	
+	hex2b {
+	get hexadecimal number from user
+	if user defined width equals hexadecimal width * 4
+		switch(hex_str)
+			case '1': print("0001")
+                	case '2': print("0010")
+	                case '3': print("0011")
+        	       	case '4': print("0100")
+               		case '5': print("0101")
+               		case '6': print("0110")
+               		case '7': print("0111")
+               		case '8': print("1000")
+               		case '9': print("1001")
+               		case 'a': print("1010")
+               		case 'b': print("1011")
+               		case 'c': print("1100")
+                	case 'd': print("1101")
+                	case 'e': print("1110")
+                	case 'f': print("1111")
+	}
+	

@@ -1,0 +1,45 @@
+BEGIN
+	INPUT rb_str (binary string)
+	REVERSE rb_str
+	STORE rb_str in b_str (binary string)
+	for (i < length of binary) 
+		if (b_str[i] == 1) 
+			STORE b2u + 2^i in b2u (binary to unsigned)
+	PRINT b2u
+	for (i < length of binary - 1)
+		if (bstr[i] == 1) 
+			STORE b2s + 2^i in b2s (binary to signed)
+		i++
+	if (first bit == 1) 
+		STORE b2s * -1 in b2s (binary to signed)
+	PRINT b2s
+	for (i < length of binary - 1)
+		if (bstr[i] == 1) 
+			STORE b2o + 2^i in b2o (binary to one's complement)
+		i++
+	if (first bit == 1) 
+		STORE b2o - 2^(index of 1st bit) in b20
+	PRINT b2o
+	for (i < length of binary - 1)
+		if (b_str[i] == 1) 
+			STORE b2t + 2^i in b2t (bianary to two's complement)
+		i++
+	if (first bit == 1) 
+		STORE b2t - 2^(index of 1st bit) in b2t
+	PRINT b2t
+	for (i < length of binary) 
+		if(b_str[i] == 1) 
+			STORE oct + 2^i in oct
+		i++
+	for (oct > 0)
+		STORE oct mod 8 in rm[i] (remainder)
+		STORE oct / 8 in oct 
+		i++
+	STORE reverse of rm in m
+	PRINT m (octal)
+	for (b2u > 0)
+		STORE b2u mod 16 in hex[i]
+		STORE b2u / 16 in b2u 
+		i++
+	PRINT hex (hexadecimal)
+END
